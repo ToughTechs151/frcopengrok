@@ -1,0 +1,9 @@
+#!/bin/bash
+filename='/home/bitnami/gitlist'
+repostore='/var/opengrok/src'
+echo Start
+cd ${repostore}
+while read url acc repo; do
+	echo "cloning ${url}"
+	git clone ${url} ${acc}-${repo}-master
+done < $filename
