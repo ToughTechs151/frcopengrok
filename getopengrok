@@ -1,0 +1,14 @@
+#!/bin/bash -xv
+
+cd ~
+latestog_url=`curl -s https://api.github.com/repos/oracle/OpenGrok/releases | grep browser_download_url | head -1 | sed -e 's/^.*https/https/' -e 's/"$//'`
+latestog_file=`basename $latestog_url`
+latestog_dir=`echo $latestog_file | sed -e 's/.tar.gz//'`
+if [ ! -f $latestog_file ]; then
+	wget $latestog_url
+	gunzip -c $latestog_file | tar xf - 
+	if [ -f opengrok ]; then
+	       	rm opengrok
+	fi
+	ln -s $latestog_dir opengrok
+fi
