@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sudo mkdir /var/opengrok
+sudo chown bitnami /var/opengrok
+mkdir /var/opengrok/etc
+cp ~/opengrok/doc/logging.properties /var/opengrok
+opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -e > /var/opengrok/etc/configuration.xml
+./cloneall
+./index-first
+cp header-include footer-include /var/opengrok/data

@@ -14,4 +14,4 @@ if [ ! -f $latestog_file ]; then
 fi
 cd opengrok/tools
 sudo python3 -m pip install open*gz
-sudo opengrok-deploy ~/opengrok/lib/source.war ${OPENGROK_TOMCAT_BASE}/webapps/source.war
+sudo opengrok-deploy -D ~/opengrok/lib/source.war ${OPENGROK_TOMCAT_BASE}/webapps/source.war

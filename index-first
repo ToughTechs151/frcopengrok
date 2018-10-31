@@ -1,0 +1,18 @@
+#!/bin/bash -xv
+
+#   ${OPENGROK_READ_XML_CONFIGURATION:+-R} ${OPENGROK_READ_XML_CONFIGURATION} \
+opengrok-indexer \
+   -C \
+   -J='-Xmx12G' \
+   -J='-server' \
+   -J="-Djava.util.logging.config.file=${OPENGROK_INSTANCE_BASE}/logging.properties" \
+   -a ${OPENGROK_DISTRIBUTION_BASE}/opengrok.jar -- \
+   -s "${OPENGROK_INSTANCE_BASE}/src" \
+   -d "${OPENGROK_INSTANCE_BASE}/data" \
+   --renamedHistory off \
+   --leadingWildCards on \
+   --memory 256 \
+   -H \
+   -P \
+   -S \
+   -W ${OPENGROK_INSTANCE_BASE}/etc/configuration.xml

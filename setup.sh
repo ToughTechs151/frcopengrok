@@ -7,6 +7,8 @@ fi
 # put the bash stuff in place.
 cp ~/frcopengrok/bashrc ~/.bash_frcopengrok
 cp ~/frcopengrok/bash_aliases ~/.bash_aliases
+. ~/.bash_frcopengrok
+. ~/.bash_aliases
 # if it isn't already there, add the source.
 grep bash_frcopengrok ~/.bashrc
 if [ $? -ne 0 ]; then
