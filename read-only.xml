@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_161" class="java.beans.XMLDecoder">
+ <object class="org.opensolaris.opengrok.configuration.Configuration" id="Configuration0">
+  <void property="groups">
+   <void method="add">
+    <object class="org.opensolaris.opengrok.configuration.Group" id="Group0">
+     <void property="name">
+      <string>CTR Electronics</string>
+     </void>
+     <void property="parent">
+      <object class="org.opensolaris.opengrok.configuration.Group" id="Group1">
+       <void property="name">
+        <string>Vendor Tools</string>
+       </void>
+       <void property="subgroups">
+        <void method="add">
+         <object idref="Group0"/>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void property="pattern">
+      <string>Phoenix-Examples-Languages|Phoenix-frc-lib</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="org.opensolaris.opengrok.configuration.Group" id="Group2">
+     <void property="name">
+      <string>FIRST-WPI</string>
+     </void>
+     <void property="subgroups">
+      <void method="add">
+       <object class="org.opensolaris.opengrok.configuration.Group" id="Group3">
+        <void property="name">
+         <string>WPI API Robot Programming</string>
+        </void>
+        <void property="parent">
+         <object idref="Group2"/>
+        </void>
+        <void property="pattern">
+         <string>allwpilib|CANJaguar|cscore|nivision|ntcore|opencv|riolog|wpiutil</string>
+        </void>
+       </object>
+      </void>
+      <void method="add">
+       <object class="org.opensolaris.opengrok.configuration.Group" id="Group4">
+        <void property="name">
+         <string>WPI Other</string>
+        </void>
+        <void property="parent">
+         <object idref="Group2"/>
+        </void>
+        <void property="pattern">
+         <string>branding|build-tools|design-docs|DocumentationBuilder|EclipsePlugins|java-installer|OutlineViewer|roborio-ant-tasks|roboRIOVisionExamples|RobotBuilder|sfx|sfx-livewindow|shuffleboard|SmartDashboard|SmartDashboard-Extensions|styleguide|toolchain-builder|vendor-template|VisionBuildSamples|wpilib-version-plugin|zulu-jre-ipk</string>
+        </void>
+       </object>
+      </void>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="org.opensolaris.opengrok.configuration.Group" id="Group5">
+     <void property="name">
+      <string>FRC151</string>
+     </void>
+     <void property="parent">
+      <object class="org.opensolaris.opengrok.configuration.Group" id="Group6">
+       <void property="name">
+        <string>Team Robots</string>
+       </void>
+       <void property="subgroups">
+        <void method="add">
+         <object idref="Group5"/>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void property="pattern">
+      <string>FRC151-2018-PowerUp</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="org.opensolaris.opengrok.configuration.Group" id="Group7">
+     <void property="name">
+      <string>Python</string>
+     </void>
+     <void property="subgroups">
+      <void method="add">
+       <object class="org.opensolaris.opengrok.configuration.Group" id="Group8">
+        <void property="name">
+         <string>robotpy</string>
+        </void>
+        <void property="parent">
+         <object idref="Group7"/>
+        </void>
+        <void property="pattern">
+         <string>pyfrc|robotpy-wpilib|wpilib-utilities|pynetworktables</string>
+        </void>
+       </object>
+      </void>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object idref="Group8"/>
+   </void>
+   <void method="add">
+    <object idref="Group6"/>
+   </void>
+   <void method="add">
+    <object class="org.opensolaris.opengrok.configuration.Group">
+     <void property="name">
+      <string>Team Tools</string>
+     </void>
+     <void property="pattern">
+      <string>Pathfinder</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object idref="Group1"/>
+   </void>
+   <void method="add">
+    <object idref="Group3"/>
+   </void>
+   <void method="add">
+    <object idref="Group4"/>
+   </void>
+  </void>
+  <void property="defaultProjects">
+   <object class="java.util.TreeSet">
+    <void method="add">
+     <object class="org.opensolaris.opengrok.configuration.Project" id="Project0">
+      <void property="indexed">
+       <boolean>true</boolean>
+      </void>
+      <void property="name">
+       <string>allwpilib</string>
+      </void>
+      <void property="path">
+       <string>/allwpilib</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="org.opensolaris.opengrok.configuration.Project" id="Project1">
+      <void property="indexed">
+       <boolean>true</boolean>
+      </void>
+      <void property="name">
+       <string>wpiutil</string>
+      </void>
+      <void property="path">
+       <string>/wpiutil</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void property="projectsEnabled">
+   <boolean>true</boolean>
+  </void>
+  <void property="remoteScmSupported">
+   <object class="java.lang.Enum" method="valueOf">
+    <class>org.opensolaris.opengrok.configuration.Configuration$RemoteSCM</class>
+    <string>ON</string>
+   </object>
+  </void>
+  <void property="sourceRoot">
+   <string>/var/opengrok/src</string>
+  </void>
+ </object>
+</java>
