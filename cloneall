@@ -1,9 +1,12 @@
 #!/bin/bash
-filename='/home/bitnami/gitlist'
-repostore='/var/opengrok/src'
+filename='/home/bitnami/frcopengrok/repolist'
+repostore='/var/opengrok/src-real'
 echo Start
+if [ ! -d ${repostore} ]; then
+	mkdir ${repostore}
+fi
 cd ${repostore}
-while read url acc repo; do
+while read url acc repo branch; do
 	echo "cloning ${url}"
-	git clone ${url} ${acc}-${repo}-master
+	git clone ${url} ${acc}-${repo}-${branch}
 done < $filename
