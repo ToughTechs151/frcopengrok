@@ -26,6 +26,7 @@ fi
 sudo update-alternatives --install /usr/bin/java java /opt/bitnami/java/bin/java 100
 sudo update-alternatives --install /usr/bin/javac javac /opt/bitnami/java/bin/javac 100
 
+cp cloneall ~/bin
 
 ./getctags
 ./getopengrok
