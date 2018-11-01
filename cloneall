@@ -1,12 +1,18 @@
 #!/bin/bash
 filename='/home/bitnami/frcopengrok/repolist'
 repostore='/var/opengrok/src-real'
+symstore='/var/opengrok/src'
+reldir=`basename ${repostore}`
 echo Start
 if [ ! -d ${repostore} ]; then
 	mkdir ${repostore}
 fi
+if [ ! -d $symstore} ]; then
+	mkdir ${symstore}
+fi
 cd ${repostore}
-while read url acc repo branch; do
+while IFS=',' read url acc repo branch; do
 	echo "cloning ${url}"
 	git clone ${url} ${acc}-${repo}-${branch}
+	( cd ${symstore} ; ln -s ../${reldir}/${acc}-${repo}-${branch} $repo )
 done < $filename

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo mkdir /var/opengrok
+sudo chown bitnami /var/opengrok
+mkdir /var/opengrok/etc
+mkdir /var/opengrok/log
+cp ./logging.properties /var/opengrok
+opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -e > /var/opengrok/etc/configuration.xml
+opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -e > /var/opengrok/etc/read-only.xml
+./cloneall
+./index-first
+cp header_include footer_include /var/opengrok/data
