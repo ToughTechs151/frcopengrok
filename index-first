@@ -1,6 +1,5 @@
 #!/bin/bash -xv
 
-#   ${OPENGROK_READ_XML_CONFIGURATION:+-R} ${OPENGROK_READ_XML_CONFIGURATION} \
 opengrok-indexer \
    -C \
    -J='-Xmx12G' \
@@ -9,6 +8,7 @@ opengrok-indexer \
    -a ${OPENGROK_DISTRIBUTION_BASE}/opengrok.jar -- \
    -s "${OPENGROK_INSTANCE_BASE}/src" \
    -d "${OPENGROK_INSTANCE_BASE}/data" \
+   ${OPENGROK_READ_XML_CONFIGURATION:+-R} ${OPENGROK_READ_XML_CONFIGURATION} \
    --renamedHistory off \
    --leadingWildCards on \
    --memory 256 \
