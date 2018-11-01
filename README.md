@@ -16,5 +16,5 @@ Run commands:
 	sudo apt-get install git
 	git clone https://github.com/FRCTeam151/frcopengrok.git
 	cd frcopengrok
-	./setup
+	./setup.sh
 </pre>
