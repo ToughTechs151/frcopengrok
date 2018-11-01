@@ -1,0 +1,21 @@
+#!/bin/bash
+
+cp noipupdate ~/bin
+if [ ! -d /usr/local/etc ]; then
+	sudo mkdir -p /usr/local/etc
+fi
+if [ -f /usr/local/etc/no-ip2.conf ]; then
+	sudo rm /usr/local/etc/no-ip2.conf
+fi
+echo 
+echo ========================================================
+echo Configuring DDNS requires information be entered by hand
+echo For the username use blublu28
+echo For the password use the current password
+echo Press "n" for the question about updating all host.
+echo Only press "y" for the host "grokfrc.ddns.net"
+echo ========================================================
+echo
+sudo /usr/local/bin/noip2 -C -c /usr/local/etc/no-ip2.conf -U 30 -x ~/bin/noipupdate
+sudo /usr/local/bin/noip2 -S
+

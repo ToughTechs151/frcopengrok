@@ -1,0 +1,18 @@
+#!/bin/bash
+cd ~
+wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
+tar xzf noip-duc-linux.tar.gz
+cd noip-[0-9]*
+make
+if [ ! -d /usr/local/bin ]; then
+	sudo mkdir /usr/local/bin
+fi
+if [ ! -d /usr/local/etc ]; then
+	sudo mkdir /usr/local/etc
+fi
+sudo rm /etc/init.d/noip2
+sudo cp deb* /etc/init.d/noip2
+sudo cp noip2 /usr/local/bin
+cd /etc/
+sudo rm rc*.d/*noip2
+for i in 2 3 4 5; do cd rc${i}.d; sudo ln -s ../init.d/noip2 S01noip2; cd ..; done
