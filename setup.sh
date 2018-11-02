@@ -26,6 +26,9 @@ fi
 # set up Bitnami Java as default
 sudo update-alternatives --install /usr/bin/java java /opt/bitnami/java/bin/java 100
 sudo update-alternatives --install /usr/bin/javac javac /opt/bitnami/java/bin/javac 100
+# Get AWS CLI
+python3 -m pip install awscli --upgrade --user
+
 
 cp cloneall ~/bin
 

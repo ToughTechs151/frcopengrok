@@ -1,5 +1,5 @@
 #!/bin/bash
-PATH="~/bin:$PATH"
+PATH="~/bin:~/.local/bin:$PATH"
 export PATH
 unset LS_COLORS
 
