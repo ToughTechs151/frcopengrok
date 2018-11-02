@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo patch -i /home/bitnami/frcopengrok/style.patch -b -N -t -d /opt/bitnami/apache-tomcat/webapps/source/default
