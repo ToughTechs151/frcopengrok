@@ -1,0 +1,15 @@
+#!/bin/bash -xv
+
+# Look for logs less than X minutes old.
+LOGS=`/home/bitnami/bin/logage.pl`
+WHO=`who`
+# Did we find any?
+if [[ ! -z "${LOGS}${WHO}" ]]; then
+	# Yep, nothing to do, just keep running.
+	echo `date` ${WHO} ${LOGS} > /tmp/lastcheck
+	exit;
+fi
+# No logs for the last period of time. Time to sleep.
+echo `date` ${WHO} ${LOGS} > /var/tmp/shuttingdown
+/opt/bitnami/ctlscript.sh stop
+/sbin/shutdown +0 System idle shutting down.
