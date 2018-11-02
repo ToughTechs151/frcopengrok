@@ -28,6 +28,10 @@ sudo update-alternatives --install /usr/bin/java java /opt/bitnami/java/bin/java
 sudo update-alternatives --install /usr/bin/javac javac /opt/bitnami/java/bin/javac 100
 # Get AWS CLI
 python3 -m pip install awscli --upgrade --user
+wget http://s3.amazonaws.com/ec2metadata/ec2-metadata
+chmod a+x ec2-metadata
+mv ec2-metadata ~/bin
+
 
 
 cp cloneall ~/bin

@@ -1,0 +1,10 @@
+#!/bin/bash
+echo
+echo ==================================================
+echo Need to enter the FRC OpenGrok Accesskey and Secret
+echo Set Region to us-east-1
+echo Leave format as the default.
+echo The Access key ID is 
+echo      AKIAJXLBWLFICLHLPZTQ
+echo ===================================================
+aws configure
