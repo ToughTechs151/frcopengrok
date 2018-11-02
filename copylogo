@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo cp 2016-17-Cogwheel.svg /opt/bitnami/apache-tomcat/webapps/source/default/img/2016-17-Cogwheel.svg
