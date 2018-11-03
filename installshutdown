@@ -1,0 +1,3 @@
+#!/bin/bash
+cp logage.pl ~/bin
+cp notomcat ~/bin
