@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_161" class="java.beans.XMLDecoder">
- <object class="org.opensolaris.opengrok.configuration.Configuration" id="Configuration0">
+ <object class="org.opengrok.indexer.configuration.Configuration" id="Configuration0">
   <void property="groups">
    <void method="add">
-    <object class="org.opensolaris.opengrok.configuration.Group" id="Group0">
+    <object class="org.opengrok.indexer.configuration.Group" id="Group0">
      <void property="name">
       <string>CTR Electronics</string>
      </void>
      <void property="parent">
-      <object class="org.opensolaris.opengrok.configuration.Group" id="Group1">
+      <object class="org.opengrok.indexer.configuration.Group" id="Group1">
        <void property="name">
         <string>Vendor Tools</string>
        </void>
@@ -25,13 +25,13 @@
     </object>
    </void>
    <void method="add">
-    <object class="org.opensolaris.opengrok.configuration.Group" id="Group2">
+    <object class="org.opengrok.indexer.configuration.Group" id="Group2">
      <void property="name">
       <string>FIRST-WPI</string>
      </void>
      <void property="subgroups">
       <void method="add">
-       <object class="org.opensolaris.opengrok.configuration.Group" id="Group3">
+       <object class="org.opengrok.indexer.configuration.Group" id="Group3">
         <void property="name">
          <string>WPI API Robot Programming</string>
         </void>
@@ -44,7 +44,7 @@
        </object>
       </void>
       <void method="add">
-       <object class="org.opensolaris.opengrok.configuration.Group" id="Group4">
+       <object class="org.opengrok.indexer.configuration.Group" id="Group4">
         <void property="name">
          <string>WPI Other</string>
         </void>
@@ -60,12 +60,12 @@
     </object>
    </void>
    <void method="add">
-    <object class="org.opensolaris.opengrok.configuration.Group" id="Group5">
+    <object class="org.opengrok.indexer.configuration.Group" id="Group5">
      <void property="name">
       <string>FRC151</string>
      </void>
      <void property="parent">
-      <object class="org.opensolaris.opengrok.configuration.Group" id="Group6">
+      <object class="org.opengrok.indexer.configuration.Group" id="Group6">
        <void property="name">
         <string>Team Robots</string>
        </void>
@@ -82,13 +82,13 @@
     </object>
    </void>
    <void method="add">
-    <object class="org.opensolaris.opengrok.configuration.Group" id="Group7">
+    <object class="org.opengrok.indexer.configuration.Group" id="Group7">
      <void property="name">
       <string>Python</string>
      </void>
      <void property="subgroups">
       <void method="add">
-       <object class="org.opensolaris.opengrok.configuration.Group" id="Group8">
+       <object class="org.opengrok.indexer.configuration.Group" id="Group8">
         <void property="name">
          <string>robotpy</string>
         </void>
@@ -110,7 +110,7 @@
     <object idref="Group6"/>
    </void>
    <void method="add">
-    <object class="org.opensolaris.opengrok.configuration.Group">
+    <object class="org.opengrok.indexer.configuration.Group">
      <void property="name">
       <string>Team Tools</string>
      </void>
@@ -132,7 +132,7 @@
   <void property="defaultProjects">
    <object class="java.util.TreeSet">
     <void method="add">
-     <object class="org.opensolaris.opengrok.configuration.Project" id="Project0">
+     <object class="org.opengrok.indexer.configuration.Project" id="Project0">
       <void property="indexed">
        <boolean>true</boolean>
       </void>
@@ -145,7 +145,7 @@
      </object>
     </void>
     <void method="add">
-     <object class="org.opensolaris.opengrok.configuration.Project" id="Project1">
+     <object class="org.opengrok.indexer.configuration.Project" id="Project1">
       <void property="indexed">
        <boolean>true</boolean>
       </void>
@@ -164,7 +164,7 @@
   </void>
   <void property="remoteScmSupported">
    <object class="java.lang.Enum" method="valueOf">
-    <class>org.opensolaris.opengrok.configuration.Configuration$RemoteSCM</class>
+    <class>org.opengrok.indexer.configuration.Configuration$RemoteSCM</class>
     <string>ON</string>
    </object>
   </void>
