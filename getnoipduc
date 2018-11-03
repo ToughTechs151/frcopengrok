@@ -10,11 +10,13 @@ fi
 if [ ! -d /usr/local/etc ]; then
 	sudo mkdir /usr/local/etc
 fi
-sudo rm /etc/init.d/noip2
+if [ -f /etc/init.d/noip2 ]; then
+	sudo rm /etc/init.d/noip2
+fi
 sudo cp deb* /etc/init.d/noip2
 sudo chmod a+x /etc/init.d/noip2
 sudo cp noip2 /usr/local/bin
 cd /etc/
-sudo rm rc*.d/*noip2
+sudo rm -f rc*.d/*noip2
 for i in 2 3 4 5; do cd rc${i}.d; sudo ln -s ../init.d/noip2 S01noip2; cd ..; done
 for i in 0 1 6; do cd rc${i}.d; sudo ln -s ../init.d/noip2 K01noip2; cd ..; done
