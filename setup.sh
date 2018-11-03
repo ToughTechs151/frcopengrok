@@ -38,3 +38,17 @@ cp cloneall ~/bin
 
 ./getctags
 ./getopengrok
+. bashrc
+./getnoipduc
+./installshutdown
+./populate-var
+stoptc
+starttc
+./fixstyle
+./copylogo
+echo 1800 > ~/howlong
+echo
+echo =================================================================================
+echo Remember to run ./confnoip and ./awsconf by hand then reboot
+echo =================================================================================
+echo 
