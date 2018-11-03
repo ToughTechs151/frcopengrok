@@ -96,7 +96,7 @@
          <object idref="Group7"/>
         </void>
         <void property="pattern">
-         <string>pyfrc|robotpy-wpilib|wpilib-utilities|pynetworktables</string>
+         <string>pyfrc|robotpy-wpilib|robotpy-wpilib-utilities|pynetworktables</string>
         </void>
        </object>
       </void>

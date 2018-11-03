@@ -29,7 +29,7 @@ https://github.com/wpilibsuite/wpilib-version-plugin.git,wpi,wpilib-version-plug
 https://github.com/wpilibsuite/wpiutil.git,wpi,wpiutil,master
 https://github.com/wpilibsuite/zulu-jre-ipk.git,wpi,zulu-jre-ipk,master
 https://github.com/oracle/opengrok.git,oracle,opengrok,master
-https://github.com/CrossTheRoadElec/Phoenix-Examples-Languages.git,CTRE,CTRE-PhoenixExamples-Languages,master
+https://github.com/CrossTheRoadElec/Phoenix-Examples-Languages.git,CTRE,Phoenix-Examples-Languages,master
 https://github.com/CrossTheRoadElec/Phoenix-frc-lib.git,CTRE,Phoenix-frc-lib,master
 https://github.com/JacisNonsense/Pathfinder.git,JacisNonsense,Pathfinder,master
 https://github.com/Open-RIO/GradleRIO.git,Open-RIO,GradleRIO,master
