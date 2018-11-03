@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+$how_long = 1800;
+$how_long =`cat /home/bitnami/howlong` if  -e "/home/bitnami/howlong";
 use Time::Piece;
 chdir("/opt/bitnami/apache-tomcat/logs");
 $ls = `ls localhost_access* | tail -1`;
@@ -12,7 +14,7 @@ my $t = Time::Piece->strptime($str, "%d/%b/%Y:%T");
 $ep = $t->epoch;
 $now = localtime->epoch;
 $diff = $now - $ep;
-if (($ep + 1800) > $now) { 
+if (($ep + $how_long) > $now) { 
 	print $t->strftime;
 	print "\n";
 }
