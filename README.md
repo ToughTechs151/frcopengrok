@@ -14,7 +14,7 @@ Go to AWS console. Start the instance if itis not running.
 Use putty to login to the instance as user bitnami. 
 Run commands:
 	sudo apt-get install git
-	git clone https://github.com/FRCTeam151/frcopengrok.git
+	git clone https://github.com/ToughTechs151/frcopengrok
 	cd frcopengrok
 	./setup.sh
 </pre>
