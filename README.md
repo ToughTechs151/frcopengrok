@@ -19,6 +19,13 @@ Run commands:
 	cd frcopengrok
 	./setup.sh
 
+When running ./noipconf be careful when entering the data.
+The email is brian@utterback.org
+When it asks about updating all hosts press "n" (no return)
+Then select "n" for all except grokfrc.ddns.net. Also without return.
+
+When running ./awsconf, select the same Acess Key ID as displayed. Enter the Secret key. Leave the other
+two as None.
 
 Use 
 git config --global user.name "your name" 
