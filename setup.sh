@@ -42,9 +42,9 @@ cp cloneall ~/bin
 ./getnoipduc
 ./installshutdown
 ./populate-var
-stoptc
-starttc
+sudo /opt/bitnami/apache-tomcat/bin/startup.sh
 ./copylogo
+./confpaths
 echo 600 > ~/howlong
 echo
 echo =================================================================================
