@@ -1,12 +1,12 @@
-/allwpilib	<a href="http://first.wpi.edu/FRC/roborio/release/docs/java/">JavaDocs</a>
-/branding	WPILib broanding standards and guidelines
+/allwpilib	</i><a href="http://first.wpi.edu/FRC/roborio/release/docs/java/">JavaDocs</a><i>
+/branding	WPILib branding standards and guidelines
 /CANJaguar	(obsolete)
 /ntcore	Network Tables protocol
 /opencv	Open Source Computer Vision library
 /oracle-opengrok	OpenGrok source code browser
 /sfx	SmartDashboard 3
-/Phoenix-frc-lib	<a href="https://www.ctr-electronics.com/downloads/api/java/html/overview-summary.html">JavaDocs</a>
-/pyfrc	<a href="https://robotpy.readthedocs.io/en/stable/">Docs</a> <a href="https://robotpy.readthedocs.io/projects/pyfrc/en/latest/api.html">API</a>
-/wpilib-utilities	<a href="https://robotpy.readthedocs.io/en/stable/">Docs</a> <a href="https://robotpy.readthedocs.io/projects/utilities/en/latest/api.html">API</a>
-/pynetworktables	<a href="https://robotpy.readthedocs.io/en/stable/">Docs</a> <a href="https://robotpy.readthedocs.io/projects/pynetworktables/en/latest/api.html">API</a>
-/robotpy-wpilib	<a href="https://robotpy.readthedocs.io/en/stable/">Docs</a> <a href="https://robotpy.readthedocs.io/projects/wpilib/en/latest/api.html">API</a>
+/Phoenix-frc-lib	</i><a href="https://www.ctr-electronics.com/downloads/api/java/html/overview-summary.html">JavaDocs</a><i>
+/pyfrc	</i><a href="https://robotpy.readthedocs.io/en/stable/">Docs</a> <a href="https://robotpy.readthedocs.io/projects/pyfrc/en/latest/api.html">API</a><i>
+/wpilib-utilities	</i><a href="https://robotpy.readthedocs.io/en/stable/">Docs</a> <a href="https://robotpy.readthedocs.io/projects/utilities/en/latest/api.html">API</a><i>
+/pynetworktables	</i><a href="https://robotpy.readthedocs.io/en/stable/">Docs</a> <a href="https://robotpy.readthedocs.io/projects/pynetworktables/en/latest/api.html">API</a><i>
+/robotpy-wpilib	</i><a href="https://robotpy.readthedocs.io/en/stable/">Docs</a> <a href="https://robotpy.readthedocs.io/projects/wpilib/en/latest/api.html">API</a><i>
