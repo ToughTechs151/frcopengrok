@@ -42,6 +42,7 @@ cp cloneall ~/bin
 ./getnoipduc
 ./installshutdown
 ./populate-var
+sudo /opt/bitnami/apache-tomcat/bin/shutdown.sh
 sudo /opt/bitnami/apache-tomcat/bin/startup.sh
 ./copylogo
 ./confpaths
