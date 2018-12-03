@@ -28,9 +28,9 @@ When running ./awsconf, select the same Acess Key ID as displayed. Enter the Sec
 two as None.
 
 Use 
+git config credential.helper store
 git config --global user.name "your name" 
 git config --global user.email "youremail" 
-git config --global user.password "yourpw" 
 git config --global core.editor vim
 
 
