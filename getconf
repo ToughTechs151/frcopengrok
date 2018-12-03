@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# get the current configuration.xml data with the API
+curl http://localhost/source/api/v1/configuration
