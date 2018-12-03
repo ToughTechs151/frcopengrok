@@ -17,4 +17,14 @@ Run commands:
 	git clone https://github.com/ToughTechs151/frcopengrok
 	cd frcopengrok
 	./setup.sh
+
+
+Use 
+git config --global user.name "your name" 
+git config --global user.email "youremail" 
+git config --global user.password "yourpw" 
+git config --global core.editor vim
+
+
+
 </pre>
