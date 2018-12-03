@@ -4,6 +4,9 @@
 if [ -f /var/opengrok/data/index/dtags.eftar ]; then
 	sudo chmod a+rw /var/opengrok/data/index/dtags.eftar
 fi
+if [ -d /var/opengrok/data/index ]; then
+	sudo chmod a+rw /var/opengrok/data/index
+fi
 # Tell the server about the paths file
 curl -i -X POST -H "Content-Type: text/plain" \
   --data-binary "@/var/opengrok/etc/paths.tsv" \
