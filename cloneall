@@ -15,4 +15,6 @@ while IFS=',' read url acc repo branch; do
 	echo "cloning ${url}"
 	git clone ${url} ${acc}-${repo}-${branch}
 	( cd ${symstore} ; ln -s ../${reldir}/${acc}-${repo}-${branch} $repo )
+	echo Updating timestamps
+	( cd ${acc}-${repo}-${branch} ; ~/frcopengrok/updatetimestamps )
 done < $filename
