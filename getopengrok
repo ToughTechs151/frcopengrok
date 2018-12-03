@@ -7,7 +7,7 @@ latestog_dir=`echo $latestog_file | sed -e 's/.tar.gz//'`
 if [ ! -f $latestog_file ]; then
 	wget $latestog_url
 	gunzip -c $latestog_file | tar xf - 
-	if [ -f opengrok ]; then
+	if [ -L opengrok ]; then
 	       	rm opengrok
 	fi
 	ln -s $latestog_dir opengrok
