@@ -1,3 +1,26 @@
 #!/bin/bash
-
-sudo patch -i /home/bitnami/frcopengrok/style.patch -b -N -t -d /opt/bitnami/apache-tomcat/webapps/source/default
+cd ~/opengrok/lib
+# Backup the original if not already backed up.
+if [ ! -f source.war.fcs ]; then
+	mv source.war source.war.fcs
+	cp source.war.fcs source.war
+fi
+# Get the original file.
+# If the file is already there, we don't need to patch
+# We assume the original file has been updated manually.
+# 
+if [ ! -f default/style.css ]; then
+	unzip source.war default/style.css
+	cd default
+	patch -b -N -t -i ~/frcopengrok/style.patch
+	cd ..
+fi
+# Update the copy in the war file.
+zip -q -u source.war default/style.css
+# Did we leave the check copy last time?
+if [ -d new ]; then
+	rm -rf new
+fi
+unzip -q source.war default/style.css -d new
+diff -q default/style.css new/default/style.css && echo fixstyle: Update successful.
+rm -rf new

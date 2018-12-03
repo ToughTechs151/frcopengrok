@@ -1,4 +1,4 @@
-#!/bin/bash -xv
+#!/bin/bash
 
 cd ~
 latestog_url=`curl -s https://api.github.com/repos/oracle/OpenGrok/releases | grep browser_download_url | head -1 | sed -e 's/^.*https/https/' -e 's/"$//'`
@@ -12,6 +12,15 @@ if [ ! -f $latestog_file ]; then
 	fi
 	ln -s $latestog_dir opengrok
 fi
+ls -l opengrok
 cd opengrok/tools
-sudo python3 -m pip install open*gz
-sudo opengrok-deploy -D ~/opengrok/lib/source.war ${OPENGROK_TOMCAT_BASE}/webapps/source.war
+sudo python3 -m pip install open*gz | grep -v "already satisfied"
+# Update style.css in war file before deploying.
+~/frcopengrok/fixstyle
+sudo opengrok-deploy ~/opengrok/lib/source.war ${OPENGROK_TOMCAT_BASE}/webapps/source.war
+echo
+echo Deploy done.
+echo After starting Tomcat you need to run:
+echo   ~/frcopengrok/copylogo
+echo   ~/frcopengrok/confpaths
+echo

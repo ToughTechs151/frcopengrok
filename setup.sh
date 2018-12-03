@@ -44,9 +44,8 @@ cp cloneall ~/bin
 ./populate-var
 stoptc
 starttc
-./fixstyle
 ./copylogo
-echo 1800 > ~/howlong
+echo 600 > ~/howlong
 echo
 echo =================================================================================
 echo Remember to run ./confnoip and ./awsconf by hand then reboot
