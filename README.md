@@ -11,6 +11,7 @@ Download *both* ppk and pem keys for the instance. PPK is for putty.
 Copy down the Tomcat manager password. 
 Go to AWS console. Start the instance if it is not running. 
 	Note the public IP address of the instance.
+Select the EC2 instance and use Edit tags to change the name to frcgrok-tomcat-be
 Use putty to login to the instance as user bitnami. 
 Run commands:
 	sudo apt-get install git
