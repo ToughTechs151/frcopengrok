@@ -1,0 +1,23 @@
+#!/bin/bash
+cd ~/dev/opengrok
+mvn compile
+mvn package -DskipTests
+cd distribution/target/
+rm -rf opengrok-1.1-rc70
+tar xfz opengrok-1.1-rc70.tar.gz 
+cd ~
+rm opengrok
+ln -s dev/opengrok/distribution/target/opengrok-1.1-rc??  opengrok
+cd ~/frcopengrok/
+sudo /opt/bitnami/apache-tomcat/bin/shutdown.sh
+if [ -d /var/opengrok/data.old ]; then
+	sudo rm -rf /var/opengrok/data.old
+fi
+mv /var/opengrok/data /var/opengrok/data.old
+./index-first 
+cp header_include footer_include /var/opengrok/data
+./fixstyle
+sudo opengrok-deploy -D ~/opengrok/lib/source.war ${OPENGROK_TOMCAT_BASE}/webapps/source.war
+sudo /opt/bitnami/apache-tomcat/bin/startup.sh
+./copylogo
+./confpaths 
