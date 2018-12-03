@@ -1,3 +1,8 @@
 #!/bin/bash
 cp logage.pl ~/bin
 cp notomcat ~/bin
+line='0,5,10,15,20,25,30,35,40,45,50,55 * * * * /home/bitnami/bin/notomcat'
+already=`sudo crontab -l -u root | grep notomcat`
+if [ -z "${already}" ]; then
+	(sudo crontab -u root -l ; echo "${line}" ) | sudo crontab -u root -
+fi
