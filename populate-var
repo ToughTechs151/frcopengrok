@@ -6,6 +6,7 @@ mkdir /var/opengrok/etc
 mkdir /var/opengrok/log
 mkdir -m ug=rwx,o=rx  /var/opengrok/data
 cp ./logging.properties /var/opengrok
+cp ./logging.properties.template /var/opengrok
 opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -e > /var/opengrok/etc/configuration.xml
 opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -e > /var/opengrok/etc/read-only.xml
 # Temp
