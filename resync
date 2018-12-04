@@ -1,7 +1,7 @@
 #!/bin/bash
 trap '{ rm /tmp/resyncrunning ; exit 1; }' INT
 touch /tmp/resyncrunning
-date > /tmp/resync
-time opengrok-sync -f -c /var/opengrok/etc/sync.conf --uri http://localhost/source -d /var/opengrok/src >> /tmp/resync 2>>&1
+echo `date` starting  >> /var/tmp/resync
+time opengrok-sync -f -c /var/opengrok/etc/sync.conf --uri http://localhost/source -d /var/opengrok/src >> /var/tmp/resync 2>>&1
 rm /tmp/resyncrunning
-dare >> /tmp/resync
+echo `date` ended >> /var/tmp/resync
