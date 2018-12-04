@@ -1,0 +1,12 @@
+#!/bin/bash
+cp fixdataperms ~/bin
+line='@reboot /home/bitnami/bin/fixdataperms'
+already=`sudo crontab -l -u root | grep fixdataperms`
+if [ ! -z "${already}" ]; then
+	echo fixdataperms already in crontab
+	exit
+fi
+(sudo crontab -u root -l ; echo "${line}" ) | sudo crontab -u root -
+line='@hourly /home/bitnami/bin/fixdataperms'
+(sudo crontab -u root -l ; echo "${line}" ) | sudo crontab -u root -
+echo fixdataperms successfully installed in crontab
