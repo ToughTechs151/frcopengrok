@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo chgrp -R bitnami /var/opengrok/data
+sudo chmod -R g+w /var/opengrok/data
