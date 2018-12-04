@@ -14,3 +14,8 @@ OPENGROK_INSTANCE_BASE=/var/opengrok
 export OPENGROK_INSTANCE_BASE
 OPENGROK_TOMCAT_BASE=/opt/bitnami/apache-tomcat
 export OPENGROK_TOMCAT_BASE
+if [ -d /opt/bitnami/apache-tomcat ]; then
+	debian_chroot="BE"
+else
+	debian_chroot="FE"
+fi
