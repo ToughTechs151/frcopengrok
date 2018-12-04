@@ -1,2 +1,5 @@
 #!/bin/bash
+trap '{ rm /tmp/resyncrunning ; exit 1; }' INT
+touch /tmp/resyncrunning
 opengrok-sync -f -c /var/opengrok/etc/sync.conf --uri http://localhost/source -d /var/opengrok/src
+rm /tmp/resyncrunning

@@ -4,6 +4,10 @@
 if [ -f /tmp/noshutdown ]; then
 	exit
 fi
+# if /tmp/resyncrunning exists, don't shutdown
+if [ -f /tmp/resyncrunning ]; then
+	exit
+fi
 nearboot=`cat /proc/uptime | sed -e 's/ .*//'`
 nearboot=`printf "%.0f" ${nearboot}`
 # no shutting down for first 5 minutes
