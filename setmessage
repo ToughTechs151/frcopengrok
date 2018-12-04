@@ -1,0 +1,15 @@
+#!/bin/bash
+# cssClass types:
+#	active,success,info,warning,error
+
+curl -k --include \
+	--request POST \
+	--header "Content-type: application/json" \
+	--data-binary "{
+\"tags\": [\"main\"],
+\"cssClass\": \"error\",
+\"text\":\"${*}\",
+\"duration\":\"PT10M\"
+}" \
+'https://localhost/source/api/v1/messages'
+# \"cssClass\": \"cssClass\",
