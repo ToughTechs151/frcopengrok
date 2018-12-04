@@ -4,7 +4,7 @@ opengrok-indexer \
    -C \
    -J='-Xmx12G' \
    -J='-server' \
-   -J="-Djava.util.logging.config.file=${OPENGROK_INSTANCE_BASE}/logging.properties" \
+   -J="-Djava.util.logging.config.file=${OPENGROK_INSTANCE_BASE}/etc/logging.properties" \
    -a ${OPENGROK_DISTRIBUTION_BASE}/opengrok.jar -- \
    -s "${OPENGROK_INSTANCE_BASE}/src" \
    -d "${OPENGROK_INSTANCE_BASE}/data" \
