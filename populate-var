@@ -5,8 +5,8 @@ sudo chown bitnami /var/opengrok
 mkdir /var/opengrok/etc
 mkdir /var/opengrok/log
 mkdir -m ug=rwx,o=rx  /var/opengrok/data
-cp ./logging.properties /var/opengrok
-cp ./logging.properties.template /var/opengrok
+cp ./logging.properties /var/opengrok/etc
+cp ./logging.properties.template /var/opengrok/etc
 opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -e > /var/opengrok/etc/configuration.xml
 opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -e > /var/opengrok/etc/read-only.xml
 # Temp
