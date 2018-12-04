@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ -z "${1}" ]; then
+	echo Must give project name.
+	exit
+fi
+PROJ=${1}
+LC_ALL=en_US.UTF-8  opengrok-reindex-project -J=-d64 '-J=-XX:-UseGCOverheadLimit' -J=-Xmx2g -J=-server \
+    --jar /home/bitnami/opengrok/lib/opengrok.jar \
+    -t /var/opengrok/etc/logging.properties.template \
+    -p "${PROJ}" \
+    -d /var/opengrok/log/${PROJ} \
+    -P "${PROJ}" \
+    --uri 'http://localhost/source' \
+    -- \
+    -U 'http://localhost/source' \
+    --renamedHistory 'off' \
+    -r dirbased \
+    --memory '256' \
+    -P \
+    -H "${PROJ}"

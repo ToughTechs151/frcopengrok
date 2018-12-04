@@ -1,0 +1,14 @@
+#!/bin/bash
+cp sync.conf /var/opengrok/etc
+cp mirror-config.yml  /var/opengrok/etc
+cp resync /home/bitnami/bin
+already=`crontab -l | grep resync`
+if [ ! -z "${already}" ]; then
+	echo resync already in crontab
+	exit
+fi
+line='@reboot /home/bitnami/bin/resync'
+(crontab -l ; echo "${line}" ) | crontab -
+line='@hourly /home/bitnami/bin/resync'
+(crontab -l ; echo "${line}" ) | crontab -
+echo resync successfully installed in crontab

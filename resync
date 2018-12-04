@@ -1,0 +1,2 @@
+#!/bin/bash
+opengrok-sync -f -c /var/opengrok/etc/sync.conf --uri http://localhost/source -d /var/opengrok/src

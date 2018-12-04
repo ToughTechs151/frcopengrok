@@ -1,0 +1,19 @@
+#
+# Commands (or paths - for specific repository types only)
+#
+#commands:
+#  git: /git/git283/bin/git
+
+logdir: /var/opengrok/log
+
+#
+# Per project configuration.
+#
+projects:
+  # git isn't working for those so I disabled them
+  some-project:
+    disabled: true
+  some-other-project-1:
+    disabled: true
+  some-other-project-2:
+    disabled: true
