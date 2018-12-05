@@ -1,13 +1,37 @@
-<table id="t01" width="100%" height="74px">
-	<tr><th rowspan="2"><a href="http://www.nashua151.org/wp/">
-		<img class="site-logo normal_logo" alt="Tough Techs" src="/source/default/img/2016-17-Cogwheel.svg" />
-	</a></th>
-	<th><a href="http://www.nashua151.org/wp/"><h1 class="site-name"
-style="color:#2909a5; font-size:24px;line-height:1;font-family:Open Sans, sans-serif;margin-bottom:2px;margin-top:0px;text-align:left;"
->Tough Techs</h1></a></th>
-<th style="text-align:center;font-size:14px;font-weight:normal;">To help defer the cost of running this service or just to be nice, please consider donating to our team. After clicking the "Donate Here" button, scroll down to the section that says OpenGrok.</th>
-</tr>
-	<tr><th style="color:#2909a5;text-align:left;margin-bottom:0px;margin-top:1px;">Nashua FIRST Robotics Team 151</th>
-	<th style="text-align:center;"><a href="https://squareup.com/store/nhs-tough-tech-151-boosters#ember1022">Donate Here</a></th></tr>
+<table id="t01" width="100%" height="94px">
+  <tr>
+    <th rowspan="2" width="5%">
+      <a href="http://www.nashua151.org/wp/"> <img class="site-logo normal_logo" alt="Tough Techs" src="/source/default/img/2016-17-Cogwheel.svg" />
+      </a>
+    </th>
+    <th width="15%">
+      <a href="http://www.nashua151.org/wp/">
+        <h1 class="site-name" style="color:#2909a5; font-size:24px;line-height:1;font-family:Open Sans, sans-serif;margin-bottom:2px;margin-top:0px;text-align:left;">
+          Tough&nbsp;Techs
+        </h1>
+      </a>
+    </th>
+    <th style="text-align:center;font-size:14px;font-weight:normal;">
+        Please consider donating to our team. Click the "Donate&nbsp;Here" button, scroll down to the section that says OpenGrok to support this server. Donations go to lengthening the idle timeout.
+    </th> 
+    <th style="text-align:center;font-size:14px;font-weight:normal;">
+        This server shuts down after a few minutes of idle time. If you click a link and you get an error, press back and then click the below link. It takes about a minute to start.
+    </th> 
+  </tr>
+  <tr>
+    <th style="color:#2909a5;text-align:left;margin-bottom:0px;margin-top:1px;" width="15%">
+      Nashua&nbsp;FIRST&nbsp;Robotics Team&nbsp;151
+    </th>
+    <th style="text-align:center;">
+      <a href="https://squareup.com/store/nhs-tough-tech-151-boosters#ember1022">
+        Donate Here
+      </a>
+    </th>
+    <th style="text-align:center;">
+      <a href="http://grok.nashua151.org/source">
+        Restart server
+      </a>
+    </th>
+  </tr>
 </table>
 
