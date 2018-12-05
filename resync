@@ -1,9 +1,28 @@
 #!/bin/bash
-exec &>>/var/tmp/resync
-trap '{ rm /tmp/resyncrunning ; exit 1; }' INT
-touch /tmp/resyncrunning
+if [ ! -f /var/tmp/resync.log ]; then
+	touch /var/tmp/resync.log
+fi
+exec &>>/var/tmp/resync.log
+echo `date` executing $$  
+trap '{ rm /tmp/resyncrunning ; rm /tmp/*.lock ; exit 1; }' INT
+if [ -f /tmp/resyncrunning ]; then
+	echo `date` resync already executing $$ `cat /tmp/resyncrunning`  
+	exit
+fi
+echo `date` $$ > /tmp/resyncrunning
+nearboot=`cat /proc/uptime | sed -e 's/ .*//'`
+nearboot=`printf "%.0f" ${nearboot}`
+while [ 120 -ge ${nearboot} ]
+do
+	echo `date` $$ Sleeping for 10
+	sleep 10
+	nearboot=`cat /proc/uptime | sed -e 's/ .*//'`
+	nearboot=`printf "%.0f" ${nearboot}`
+done
+
 PATH=${PATH}:/usr/local/bin
-echo `date` starting  
+echo `date` starting $$ 
 time /usr/local/bin/opengrok-sync -f -c /var/opengrok/etc/sync.conf --uri http://localhost/source -d /var/opengrok/src
 rm /tmp/resyncrunning
-echo `date` ended
+rm /tmp/*.lock
+echo `date` ended $$
