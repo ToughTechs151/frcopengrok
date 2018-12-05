@@ -10,9 +10,10 @@ logdir: /var/opengrok/log
 # Per project configuration.
 #
 projects:
-  # git isn't working for those so I disabled them
+  # This is the name of the opengrok project in source root
   opengrok:
-    disabled: true
+     ignored_repos:
+             - testdata/*
   some-other-project-1:
     disabled: true
   some-other-project-2:
