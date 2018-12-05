@@ -11,7 +11,7 @@ logdir: /var/opengrok/log
 #
 projects:
   # git isn't working for those so I disabled them
-  some-project:
+  opengrok:
     disabled: true
   some-other-project-1:
     disabled: true
