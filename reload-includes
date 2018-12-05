@@ -1,0 +1,7 @@
+#!/bin/bash
+# cssClass types:
+#	active,success,info,warning,error
+
+curl -k --include \
+	--request PUT \
+'https://localhost/source/api/v1/system/includes/reload'
