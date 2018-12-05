@@ -34,5 +34,7 @@ git config --global user.email "youremail"
 git config --global core.editor vim
 
 
+Note: preinstalled .bashrc has a bug. Where it sets PS1 for xterms, the part aboue debian_chroot is in double 
+ quote instead of single quotes. 
 
 </pre>
