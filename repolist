@@ -7,6 +7,11 @@ https://github.com/wpilibsuite/design-docs.git,wpi,design-docs,master
 https://github.com/wpilibsuite/DocumentationBuilder.git,wpi,DocumentationBuilder,master
 https://github.com/wpilibsuite/EclipsePlugins.git,wpi,EclipsePlugins,master
 https://github.com/ToughTechs151/FRC-2018-PowerUp.git,ToughTechs151,FRC151-2018-PowerUp,master
+https://github.com/ToughTechs151/ShowBot2018.git,ToughTechs151,FRC151-ShowBot2018,master
+https://github.com/ToughTechs151/DeepSpace2019.git,ToughTechs151,FRC151-DeepSpace2019,master
+https://github.com/sertain/sertain.git,SERT2521,FRC2521-setain,master
+https://github.com/flamingchickens1540/ROOSTER,FlamingChickens1540,FRC1540-ROOSTER,master
+https://github.com/dominikWin/badlog.git,BadRobots1014,FRC1014-badlog,master
 https://github.com/wpilibsuite/java-installer.git,wpi,java-installer,master
 https://github.com/wpilibsuite/nivision.git,wpi,nivision,master
 https://github.com/wpilibsuite/ntcore.git,wpi,ntcore,master
@@ -30,7 +35,7 @@ https://github.com/wpilibsuite/wpiutil.git,wpi,wpiutil,master
 https://github.com/wpilibsuite/zulu-jre-ipk.git,wpi,zulu-jre-ipk,master
 https://github.com/oracle/opengrok.git,oracle,opengrok,master
 https://github.com/CrossTheRoadElec/Phoenix-Examples-Languages.git,CTRE,Phoenix-Examples-Languages,master
-https://github.com/CrossTheRoadElec/Phoenix-frc-lib.git,CTRE,Phoenix-frc-lib,master
+https://github.com/CrossTheRoadElec/Phoenix-api.git,CTRE,Phoenix-api,master
 https://github.com/JacisNonsense/Pathfinder.git,JacisNonsense,Pathfinder,master
 https://github.com/Open-RIO/GradleRIO.git,Open-RIO,GradleRIO,master
 https://github.com/robotpy/pyfrc.git,robotpy,pyfrc,master

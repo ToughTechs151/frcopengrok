@@ -29,10 +29,10 @@ ogg "FIRST-WPI"
 ogg "Python"
  ogg "robotpy" "pyfrc|robotpy-wpilib|robotpy-wpilib-utilities|pynetworktables" "Python"
 ogg "Team Robots"
- ogg "FRC151" "FRC151-2018-PowerUp" "Team Robots"
-ogg "Team Tools" "Pathfinder"
+ ogg "FRC151" "FRC151-2018-PowerUp|FRC151-ShowBot2018|FRC151-DeepSpace2019" "Team Robots"
+ogg "Team Tools" "Pathfinder|FRC2521-sertain"
 ogg "Vendor Tools"
- ogg "CTR Electronics" "Phoenix-Examples-Languages|Phoenix-frc-lib" "Vendor Tools"
+ ogg "CTR Electronics" "Phoenix-Examples-Languages|Phoenix-api" "Vendor Tools"
  
 opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -i c.xml -l
 echo ======================
