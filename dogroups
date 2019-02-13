@@ -33,7 +33,4 @@ ogg "Team Robots"
 ogg "Team Tools" "Pathfinder|FRC2521-sertain"
 ogg "Vendor Tools"
  ogg "CTR Electronics" "Phoenix-Examples-Languages|Phoenix-api" "Vendor Tools"
- 
-opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -i c.xml -l
-echo ======================
-opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -i frcopengrok/read-only.xml -l
+mv c.xml /var/opengrok/etc/read-only.xml

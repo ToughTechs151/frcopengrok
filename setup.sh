@@ -1,4 +1,4 @@
-#!/bin/bash -xv
+#!/bin/bash
 
 # create the place for the commands
 if [ ! -d ~/bin ]; then
@@ -14,10 +14,11 @@ grep bash_frcopengrok ~/.bashrc
 if [ $? -ne 0 ]; then
 	echo '. ~/.bash_frcopengrok' >> ~/.bashrc
 fi
-sudo apt-get update
-sudo apt-get --yes install autotools-dev automake pkg-config mercurial subversion cvs cssc python3-pip
+sudo apt-get --quiet update
+sudo apt-get --yes --quiet install autotools-dev automake pkg-config mercurial subversion cvs cssc python3-pip
 # set the git editor
 git config --global core.editor vi
+git config diff.renamelimit 1000
 # set up /var/opengrok
 if [ ! -d /var/opengrok ]; then
 	sudo mkdir /var/opengrok
@@ -43,6 +44,7 @@ cp cloneall ~/bin
 ./installshutdown
 ./addgroups
 ./populate-var
+./installfixdataperms
 sudo /opt/bitnami/apache-tomcat/bin/shutdown.sh
 sudo /opt/bitnami/apache-tomcat/bin/startup.sh
 ./copylogo
