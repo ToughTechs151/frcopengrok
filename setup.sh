@@ -50,6 +50,7 @@ sudo /opt/bitnami/apache-tomcat/bin/startup.sh
 ./copylogo
 sleep 20
 ./confpaths
+./installsync
 echo 600 > ~/howlong
 echo
 echo =================================================================================
