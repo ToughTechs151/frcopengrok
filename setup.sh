@@ -48,6 +48,7 @@ cp cloneall ~/bin
 sudo /opt/bitnami/apache-tomcat/bin/shutdown.sh
 sudo /opt/bitnami/apache-tomcat/bin/startup.sh
 ./copylogo
+sleep 20
 ./confpaths
 echo 600 > ~/howlong
 echo
