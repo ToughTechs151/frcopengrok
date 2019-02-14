@@ -18,7 +18,7 @@ sudo apt-get --quiet update
 sudo apt-get --yes --quiet install autotools-dev automake pkg-config mercurial subversion cvs cssc python3-pip
 # set the git editor
 git config --global core.editor vi
-git config diff.renameLimit 1000
+git config --global diff.renameLimit 1000
 # set up /var/opengrok
 if [ ! -d /var/opengrok ]; then
 	sudo mkdir /var/opengrok
