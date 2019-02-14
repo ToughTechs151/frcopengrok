@@ -6,10 +6,11 @@ https://github.com/wpilibsuite/cscore.git,wpi,cscore,master
 https://github.com/wpilibsuite/design-docs.git,wpi,design-docs,master
 https://github.com/wpilibsuite/DocumentationBuilder.git,wpi,DocumentationBuilder,master
 https://github.com/wpilibsuite/EclipsePlugins.git,wpi,EclipsePlugins,master
+https://github.com/wpilibsuite/GradleRIO.git,wpi,GradleRIO,master
 https://github.com/ToughTechs151/FRC-2018-PowerUp.git,ToughTechs151,FRC151-2018-PowerUp,master
 https://github.com/ToughTechs151/ShowBot2018.git,ToughTechs151,FRC151-ShowBot2018,master
 https://github.com/ToughTechs151/DeepSpace2019.git,ToughTechs151,FRC151-DeepSpace2019,master
-https://github.com/sertain/sertain.git,SERT2521,FRC2521-setain,master
+https://github.com/sertain/sertain.git,SERT2521,FRC2521-sertain,master
 https://github.com/flamingchickens1540/ROOSTER,FlamingChickens1540,FRC1540-ROOSTER,master
 https://github.com/dominikWin/badlog.git,BadRobots1014,FRC1014-badlog,master
 https://github.com/wpilibsuite/java-installer.git,wpi,java-installer,master
@@ -17,6 +18,7 @@ https://github.com/wpilibsuite/nivision.git,wpi,nivision,master
 https://github.com/wpilibsuite/ntcore.git,wpi,ntcore,master
 https://github.com/wpilibsuite/opencv.git,wpi,opencv,310
 https://github.com/wpilibsuite/OutlineViewer.git,wpi,OutlineViewer,master
+https://github.com/wpilibsuite/PathWeaver.git,wpi,PathWeaver,master
 https://github.com/wpilibsuite/riolog.git,wpi,riolog,master
 https://github.com/wpilibsuite/roborio-ant-tasks.git,wpi,roborio-ant-tasks,master
 https://github.com/wpilibsuite/roboRIOVisionExamples.git,wpi,roboRIOVisionExamples,master
@@ -30,6 +32,7 @@ https://github.com/wpilibsuite/styleguide.git,wpi,styleguide,master
 https://github.com/wpilibsuite/toolchain-builder.git,wpi,toolchain-builder,2018
 https://github.com/wpilibsuite/vendor-template.git,wpi,vendor-template,master
 https://github.com/wpilibsuite/VisionBuildSamples.git,wpi,VisionBuildSamples,master
+https://github.com/wpilibsuite/vscode-wpilib.git,wpi,vscode-wpilib,master
 https://github.com/wpilibsuite/wpilib-version-plugin.git,wpi,wpilib-version-plugin,master
 https://github.com/wpilibsuite/wpiutil.git,wpi,wpiutil,master
 https://github.com/wpilibsuite/zulu-jre-ipk.git,wpi,zulu-jre-ipk,master
@@ -37,7 +40,6 @@ https://github.com/oracle/opengrok.git,oracle,opengrok,master
 https://github.com/CrossTheRoadElec/Phoenix-Examples-Languages.git,CTRE,Phoenix-Examples-Languages,master
 https://github.com/CrossTheRoadElec/Phoenix-api.git,CTRE,Phoenix-api,master
 https://github.com/JacisNonsense/Pathfinder.git,JacisNonsense,Pathfinder,master
-https://github.com/Open-RIO/GradleRIO.git,Open-RIO,GradleRIO,master
 https://github.com/robotpy/pyfrc.git,robotpy,pyfrc,master
 https://github.com/robotpy/pynetworktables.git,robotpy,pynetworktables,master
 https://github.com/robotpy/robotpy-wpilib.git,robotpy,robotpy-wpilib,master
