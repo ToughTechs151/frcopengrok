@@ -12,6 +12,7 @@ opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -e > /var/opengrok/etc/read-on
 # Temp
 #cp read-only.xml /var/opengrok/etc/read-only.xml
 ./cloneall
+./dogroups
 ./index-first
 cp header_include footer_include /var/opengrok/data
 cp paths.tsv /var/opengrok/etc/paths.tsv
