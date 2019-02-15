@@ -30,7 +30,7 @@ ogg "Python"
  ogg "robotpy" "pyfrc|robotpy-wpilib|robotpy-wpilib-utilities|pynetworktables" "Python"
 ogg "Team Robots"
  ogg "FRC151" "FRC151-2018-PowerUp|FRC151-ShowBot2018|FRC151-DeepSpace2019" "Team Robots"
-ogg "Team Tools" "Pathfinder|FRC1540-ROOSTER|FRC2521-sertain"
+ogg "Team Tools" "Pathfinder|FRC1014-badlog|FRC1540-ROOSTER|FRC2521-sertain"
 ogg "Vendor Tools"
  ogg "CTR Electronics" "Phoenix-Examples-Languages|Phoenix-api" "Vendor Tools"
 mv c.xml /var/opengrok/etc/read-only.xml
