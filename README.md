@@ -19,7 +19,7 @@ Run commands:
 	cd frcopengrok
 	./setup.sh
 
-When running ./noipconf be careful when entering the data.
+When running ./confnoip be careful when entering the data.
 The email is brian@utterback.org
 When it asks about updating all hosts press "n" (no return)
 Then select "n" for all except grokfrc.ddns.net. Also without return.
