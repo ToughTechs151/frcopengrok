@@ -16,6 +16,7 @@ if [ $? -ne 0 ]; then
 fi
 sudo apt-get --quiet update
 sudo apt-get --yes --quiet install autotools-dev automake pkg-config mercurial subversion cvs cssc python3-pip
+./addgroups
 # set the git editor
 git config --global core.editor vi
 git config --global diff.renameLimit 1000
@@ -42,7 +43,6 @@ cp cloneall ~/bin
 . bashrc
 ./getnoipduc
 ./installshutdown
-./addgroups
 ./populate-var
 ./installfixdataperms
 sudo /opt/bitnami/apache-tomcat/bin/shutdown.sh
