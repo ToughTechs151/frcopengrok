@@ -10,7 +10,7 @@ mv /var/opengrok/data /var/opengrok/data.old
 ./index-first 
 cp header_include footer_include /var/opengrok/data
 ./fixstyle
-sudo opengrok-deploy -D ~/opengrok/lib/source.war ${OPENGROK_TOMCAT_BASE}/webapps/source.war
+sudo -u tomcat opengrok-deploy -D ~/opengrok/lib/source.war ${OPENGROK_TOMCAT_BASE}/webapps/source.war
 sudo /opt/bitnami/apache-tomcat/bin/startup.sh
 ./copylogo
 ./confpaths 
