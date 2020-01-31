@@ -15,7 +15,7 @@ if [ $? -ne 0 ]; then
 	echo '. ~/.bash_frcopengrok' >> ~/.bashrc
 fi
 sudo apt-get --quiet update
-sudo apt-get --yes --quiet install autotools-dev automake pkg-config mercurial subversion cvs cssc python3-pip
+sudo apt-get --yes --quiet install autotools-dev automake pkg-config mercurial subversion cvs cssc python3-pip default-jre default-jdk
 ./addgroups
 # set the git editor
 git config --global core.editor vi
@@ -26,8 +26,8 @@ if [ ! -d /var/opengrok ]; then
 	sudo chown bitnami /var/opengrok
 fi
 # set up Bitnami Java as default
-sudo update-alternatives --install /usr/bin/java java /opt/bitnami/java/bin/java 100
-sudo update-alternatives --install /usr/bin/javac javac /opt/bitnami/java/bin/javac 100
+#sudo update-alternatives --install /usr/bin/java java /opt/bitnami/java/bin/java 100
+#sudo update-alternatives --install /usr/bin/javac javac /opt/bitnami/java/bin/javac 100
 # Get AWS CLI
 python3 -m pip install awscli --upgrade --user
 wget http://s3.amazonaws.com/ec2metadata/ec2-metadata
