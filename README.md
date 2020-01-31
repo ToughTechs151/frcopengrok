@@ -4,6 +4,7 @@ Configurations for FRC OpenGrok Server
 
 Instructions for setting up FRC OpenGrok server.
 Sign in to Bitnami.com
+For AWS:
 Create AWS instance running Apache/Tomcat Debian 9
 	Use T2.small, magnetic disk, 2GB memory, 10GB disk, region us-east-1 
 Download *both* ppk and pem keys for the instance. PPK is for putty.
@@ -13,6 +14,23 @@ Go to AWS console. Start the instance if it is not running.
 	Note the public IP address of the instance.
 Select the EC2 instance and use Edit tags to change the name to frcgrok-tomcat-be
 Use putty to login to the instance as user bitnami. 
+
+For VM
+Download OVA instance for Tomcat
+login to the console with username/password bitnami/bitnami
+Change user name password to something new. 
+Check that ssh is running by executing "sudo systemctl status ssh"
+If not run the following:
+     sudo rm -f /etc/ssh/sshd_not_to_be_run
+     sudo systemctl enable ssh
+     sudo systemctl start ssh
+Find the IP address with sudo ifconfig -a
+Run putty, create new profile with the IP. 
+Connect with putty with password. Accept new key.
+Create .ssh/authorized_keys file with your public key.
+
+
+
 Run commands:
 	sudo apt-get -q -y install git
 	git clone https://github.com/ToughTechs151/frcopengrok
