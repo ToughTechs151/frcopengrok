@@ -3,7 +3,7 @@
 $how_long = 1800;
 $how_long =`cat /home/bitnami/howlong` if  -e "/home/bitnami/howlong";
 use Time::Piece;
-chdir("/opt/bitnami/apache-tomcat/logs");
+chdir("/opt/bitnami/apache/logs");
 $ls = `ls localhost_access* | tail -1`;
 chomp($ls);
 #$str = `grep source $ls | tail -1

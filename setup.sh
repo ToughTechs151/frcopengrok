@@ -45,8 +45,8 @@ cp cloneall ~/bin
 ./installshutdown
 ./populate-var
 ./installfixdataperms
-sudo /opt/bitnami/apache-tomcat/bin/shutdown.sh
-sudo /opt/bitnami/apache-tomcat/bin/startup.sh
+sudo /opt/bitnami/tomcat/bin/shutdown.sh
+sudo /opt/bitnami/tomcat/bin/startup.sh
 ./copylogo
 sleep 20
 ./confpaths

@@ -9,7 +9,7 @@ cd ~
 rm opengrok
 ln -s dev/opengrok/distribution/target/opengrok-1.1-rc??  opengrok
 cd ~/frcopengrok/
-sudo /opt/bitnami/apache-tomcat/bin/shutdown.sh
+sudo /opt/bitnami/tomcat/bin/shutdown.sh
 if [ -d /var/opengrok/data.old ]; then
 	sudo rm -rf /var/opengrok/data.old
 fi
@@ -18,6 +18,6 @@ mv /var/opengrok/data /var/opengrok/data.old
 cp header_include footer_include /var/opengrok/data
 ./fixstyle
 sudo -u tomcat opengrok-deploy -D ~/opengrok/lib/source.war ${OPENGROK_TOMCAT_BASE}/webapps/source.war
-sudo /opt/bitnami/apache-tomcat/bin/startup.sh
+sudo /opt/bitnami/tomcat/bin/startup.sh
 ./copylogo
 ./confpaths 
