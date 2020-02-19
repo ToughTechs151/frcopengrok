@@ -16,9 +16,7 @@ while IFS=',' read url acc repo branch; do
 	git clone ${url} ${acc}-${repo}-${branch}
 	( cd ${symstore} ; ln -s ../${reldir}/${acc}-${repo}-${branch} $repo )
 	if [ $branch != master ]; then
-		cd $repo
-		git checkout $branch
-		cd ..
+		( cd ${symstore}/${repo} ; git checkout $branch )
 	fi
 	echo Updating timestamps
 	( cd ${acc}-${repo}-${branch} ; ~/frcopengrok/updatetimestamps )
