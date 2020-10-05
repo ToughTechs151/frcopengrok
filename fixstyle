@@ -10,17 +10,17 @@ fi
 # We assume the original file has been updated manually.
 # 
 if [ ! -f default/style.css ]; then
-	unzip source.war default/style.css
+	unzip source.war default/style-1.0.0.css
 	cd default
 	patch -b -N -t -i ~/frcopengrok/style.patch
 	cd ..
 fi
 # Update the copy in the war file.
-zip -q -u source.war default/style.css
+zip -q -u source.war default/style-1.0.0.css
 # Did we leave the check copy last time?
 if [ -d new ]; then
 	rm -rf new
 fi
-unzip -q source.war default/style.css -d new
-diff -q default/style.css new/default/style.css && echo fixstyle: Update successful.
+unzip -q source.war default/style-1.0.0.css -d new
+diff -q default/style-1.0.0.css new/default/style-1.0.0.css && echo fixstyle: Update successful.
 rm -rf new

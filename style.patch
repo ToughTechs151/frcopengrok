@@ -1,5 +1,5 @@
---- style.css
-+++ style.css
+--- style-1.0.0.css
++++ style-1.0.0.css
 @@ -269,7 +269,7 @@
      position: fixed;
      top: 0;
