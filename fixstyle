@@ -13,6 +13,10 @@ if [ ! -f default/style.css ]; then
 	unzip source.war default/style-1.0.0.css
 	cd default
 	patch -b -N -t -i ~/frcopengrok/style.patch
+# We need to rename the style file until we figure out
+# how to actually convert it.
+	mv style-1.0.0.min.css hold-style-1.0.0.min.css
+	cp style-1.0.0.css style-1.0.0.min.css
 	cd ..
 fi
 # Update the copy in the war file.
