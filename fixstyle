@@ -10,21 +10,21 @@ fi
 # We assume the original file has been updated manually.
 # 
 if [ ! -f default/style.css ]; then
-	unzip source.war default/style-1.0.0.css
+	unzip source.war default/style-1.0.4.css
 	cd default
 	patch -b -N -t -i ~/frcopengrok/style.patch
 # We need to rename the style file until we figure out
 # how to actually convert it.
-	mv style-1.0.0.min.css hold-style-1.0.0.min.css
-	cp style-1.0.0.css style-1.0.0.min.css
+	mv style-1.0.4.min.css hold-style-1.0.4.min.css
+	cp style-1.0.4.css style-1.0.4.min.css
 	cd ..
 fi
 # Update the copy in the war file.
-zip -q -u source.war default/style-1.0.0.css
+zip -q -u source.war default/style-1.0.4.css
 # Did we leave the check copy last time?
 if [ -d new ]; then
 	rm -rf new
 fi
-unzip -q source.war default/style-1.0.0.css -d new
-diff -q default/style-1.0.0.css new/default/style-1.0.0.css && echo fixstyle: Update successful.
+unzip -q source.war default/style-1.0.4.css -d new
+diff -q default/style-1.0.4.css new/default/style-1.0.4.css && echo fixstyle: Update successful.
 rm -rf new
