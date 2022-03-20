@@ -22,8 +22,6 @@ https://github.com/wpilibsuite/toolchain-builder.git,wpi,toolchain-builder,2018
 https://github.com/wpilibsuite/vendor-template.git,wpi,vendor-template,master
 https://github.com/wpilibsuite/VisionBuildSamples.git,wpi,VisionBuildSamples,master
 https://github.com/wpilibsuite/vscode-wpilib.git,wpi,vscode-wpilib,master
-https://github.com/wpilibsuite/wpilib-math.git,wpi,wpilib-math,master
-https://github.com/wpilibsuite/wpilib-util.git,wpi,wpilib-util,master
 https://github.com/wpilibsuite/wpilib-version-plugin.git,wpi,wpilib-version-plugin,master
 https://github.com/wpilibsuite/wpilib-version-plugin.git,wpi,wpilib-version-plugin,master
 https://github.com/wpilibsuite/WPILibPi.git,wpi,WPILib-Pi,master
@@ -31,6 +29,7 @@ https://github.com/wpilibsuite/zulu-jre-ipk.git,wpi,zulu-jre-ipk,master
 https://github.com/oracle/opengrok.git,oracle,opengrok,master
 https://github.com/CrossTheRoadElec/Phoenix-Examples-Languages.git,CTRE,Phoenix-Examples-Languages,master
 https://github.com/CrossTheRoadElec/Phoenix-api.git,CTRE,Phoenix-api,master
+https://github.com/REVrobotics/SPARK-MAX-Examples.git,REVRobotics,SPARK-MAX-Examples,master
 https://github.com/JacisNonsense/Pathfinder.git,JacisNonsense,Pathfinder,master
 https://github.com/robotpy/pyfrc.git,robotpy,pyfrc,master
 https://github.com/robotpy/pynetworktables.git,robotpy,pynetworktables,master
