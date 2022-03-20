@@ -24,10 +24,12 @@ If not run the following:
      sudo rm -f /etc/ssh/sshd_not_to_be_run
      sudo systemctl enable ssh
      sudo systemctl start ssh
-Find the IP address with sudo ifconfig -a
+Find the IP address with "ip address"
 Run putty, create new profile with the IP. 
+Enable password authentication with sshd.
 Connect with putty with password. Accept new key.
 Create .ssh/authorized_keys file with your public key.
+Disable password authentication with sshd
 
 
 
@@ -52,7 +54,7 @@ git config --global user.email "youremail"
 git config --global core.editor vim
 
 
-Note: preinstalled .bashrc has a bug. Where it sets PS1 for xterms, the part aboue debian_chroot is in double 
+Note: preinstalled .bashrc has a bug. Where it sets PS1 for xterms, the part about debian_chroot is in double 
  quote instead of single quotes. 
 
 </pre>
