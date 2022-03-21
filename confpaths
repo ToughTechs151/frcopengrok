@@ -9,8 +9,8 @@ if [ -d /var/opengrok/data/index ]; then
 fi
 # Tell the server about the paths file
 curl -i -X POST -H "Content-Type: application/json" \
-  --data-binary "@/var/opengrok/etc/paths.json" \
-  http://localhost/source/api/v1/system/pathdesc
+  --data "@/var/opengrok/etc/paths.json" \
+  http://localhost:8080/source/api/v1/system/pathdesc
 # fix the permissions and group
 sleep 5
 /home/bitnami/bin/fixdataperms

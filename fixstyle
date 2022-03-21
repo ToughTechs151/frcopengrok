@@ -1,4 +1,5 @@
 #!/bin/bash
+styfile=style-1.0.4
 cd ~/opengrok/lib
 # Backup the original if not already backed up.
 if [ ! -f source.war.fcs ]; then
@@ -9,22 +10,24 @@ fi
 # If the file is already there, we don't need to patch
 # We assume the original file has been updated manually.
 # 
-if [ ! -f default/style.css ]; then
-	unzip source.war default/style-1.0.4.css
+if [ ! -f default/${styfile}.css ]; then
+	unzip source.war 'default/style-*.css'
 	cd default
-	patch -b -N -t -i ~/frcopengrok/style.patch
+	patch -b -N -t -i ~/frcopengrok/style.patch ${styfile}.css
 # We need to rename the style file until we figure out
 # how to actually convert it.
-	mv style-1.0.4.min.css hold-style-1.0.4.min.css
-	cp style-1.0.4.css style-1.0.4.min.css
+	mv ${styfile}.min.css hold-${styfile}.min.css
+	curl -X POST -s --data-urlencode "input@${styfile}.css" https://www.toptal.com/developers/cssminifier/raw > ${styfile}.min.css
+
+#	cp ${styfile}.css ${styfile}.min.css
 	cd ..
 fi
 # Update the copy in the war file.
-zip -q -u source.war default/style-1.0.4.css
+zip -q -u source.war default/${styfile}.css default/${styfile}.min.css
 # Did we leave the check copy last time?
 if [ -d new ]; then
 	rm -rf new
 fi
-unzip -q source.war default/style-1.0.4.css -d new
-diff -q default/style-1.0.4.css new/default/style-1.0.4.css && echo fixstyle: Update successful.
-rm -rf new
+unzip -q source.war default/${styfile}.css default/${styfile}.min.css -d new
+diff -q default/${styfile}.min.css new/default/${styfile}.min.css && echo fixstyle: Update successful.
+#rm -rf new

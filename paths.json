@@ -1,7 +1,7 @@
 [
  {
    "path": "/allwpilib",
-   "description": "</i><a href=\"http://first.wpi.edu/FRC/roborio/release/docs/java/\">JavaDocs</a><i>"
+   "description": "</i><a href=\"http://first.wpi.edu/wpilib/allwpilib/docs/release/java/\">JavaDocs</a><i>"
  },
  {
    "path": "/branding",
@@ -42,4 +42,5 @@
  {
    "path": "/Oblarg-Oblog",
    "description": "</i><a href=\"https://oblog-docs.readthedocs.io/en/latest/getting-started.html\">Docs</a><i>"
+ }
 ]
