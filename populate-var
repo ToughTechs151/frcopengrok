@@ -15,4 +15,4 @@ opengrok-groups -a ~/opengrok/lib/opengrok.jar -- -e > /var/opengrok/etc/read-on
 ./dogroups
 ./index-first
 cp header_include footer_include /var/opengrok/data
-cp paths.tsv /var/opengrok/etc/paths.tsv
+cp paths.json /var/opengrok/etc/paths.json

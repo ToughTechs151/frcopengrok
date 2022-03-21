@@ -8,8 +8,8 @@ if [ -d /var/opengrok/data/index ]; then
 	sudo chmod g+rw /var/opengrok/data/index
 fi
 # Tell the server about the paths file
-curl -i -X POST -H "Content-Type: text/plain" \
-  --data-binary "@/var/opengrok/etc/paths.tsv" \
+curl -i -X POST -H "Content-Type: application/json" \
+  --data-binary "@/var/opengrok/etc/paths.json" \
   http://localhost/source/api/v1/system/pathdesc
 # fix the permissions and group
 sleep 5
